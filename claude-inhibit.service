@@ -1,0 +1,10 @@
+[Unit]
+Description=Inhibit sleep while Claude Code agents are working
+
+[Service]
+ExecStart=%h/.local/bin/claude-inhibit
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
